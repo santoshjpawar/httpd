@@ -7,8 +7,6 @@ before_install:
   - eval "$(chef shell-init bash)"
 script:
   # Vet the code
-  - rubocop -v
-  - foodcritic -V
   - rubocop recipes
   - foodcritic recipes
   - chef exec rspec
