@@ -2,9 +2,8 @@ language: ruby
 before_install:
   - echo "before_install"
 script:
-  - echo "script"
-  - pwd
-  - ls -al
+  - rubocop .
+  - foodcritic .
 notifications:
   email:
     recipients:
