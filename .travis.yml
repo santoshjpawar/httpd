@@ -8,7 +8,7 @@ before_install:
 script:
   # Vet the code
   - rubocop recipes
-  - foodcritic recipes
+  - foodcritic .
   - chef exec rspec
 notifications:
   email:
