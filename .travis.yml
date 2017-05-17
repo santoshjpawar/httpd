@@ -4,6 +4,7 @@ before_install:
 script:
   - uname -a
   - ls -al /etc/
+  - cat /etc/debian_version
   - rubocop .
   - foodcritic .
 notifications:
