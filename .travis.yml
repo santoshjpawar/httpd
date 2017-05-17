@@ -1,10 +1,9 @@
 language: ruby
 before_install:
-  - echo "before_install"
-script:
+  - id
   - wget https://packages.chef.io/files/stable/chefdk/1.3.43/debian/7/chefdk_1.3.43-1_amd64.deb -O /tmp/chefdk.deb
-  - ls -al /tmp/
-  - dpkg -i /tmp/chefdk.deb
+  - sudo dpkg -i /tmp/chefdk.deb
+script:
   - rubocop .
   - foodcritic .
 notifications:
