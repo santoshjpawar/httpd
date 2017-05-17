@@ -1,0 +1,11 @@
+language: ruby
+before_install:
+  - echo "before_install"
+script:
+  - echo "script"
+notifications:
+  email:
+    recipients:
+      - psantosh@us.ibm.com
+    on_success: change
+    on_failure: always
