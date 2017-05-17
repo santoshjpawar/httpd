@@ -10,8 +10,4 @@ describe 'httpd::default' do
   it "should have default install_method 'package'" do
     expect(chef_run).to install_package('httpd')
   end
-  
-  it "should have default install_method 'package'" do
-    expect(chef_run).to install_package('apache2')
-  end
 end
