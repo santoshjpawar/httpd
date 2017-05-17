@@ -2,6 +2,8 @@ language: ruby
 before_install:
   - echo "before_install"
 script:
+  - uname -a
+  - ls -al /etc/
   - rubocop .
   - foodcritic .
 notifications:
