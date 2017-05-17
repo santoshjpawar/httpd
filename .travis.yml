@@ -1,9 +1,11 @@
 language: ruby
 before_install:
-  - gem install rubocop
-  #- id
-  #- wget https://packages.chef.io/files/stable/chefdk/1.3.43/debian/7/chefdk_1.3.43-1_amd64.deb -O /tmp/chefdk.deb
-  #- sudo dpkg -i /tmp/chefdk.deb
+  - id
+  - wget https://packages.chef.io/files/stable/chefdk/1.3.43/debian/7/chefdk_1.3.43-1_amd64.deb -O /tmp/chefdk.deb
+  - sudo dpkg -i /tmp/chefdk.deb
+  - which ruby
+  - eval "$(chef shell-init bash)"
+  - which ruby
 script:
   - rubocop .
   - foodcritic .
