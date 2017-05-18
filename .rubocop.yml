@@ -2,3 +2,7 @@ AllCops:
   Excludes:
     - Vagrantfile
     - README.md
+
+# Customize rules
+Metrics/LineLength:
+  Max: 200

@@ -19,6 +19,6 @@ describe file('/tmp/zabbix-2.4.7-1.el6.x86_64.rpm') do
 end
 
 # Failure case to check non-existing file
-#describe file('/zabbix-2.4.7-1.el6.x86_64.rpm') do
+# describe file('/zabbix-2.4.7-1.el6.x86_64.rpm') do
 #  it { should be_file }
-#end
+# end
