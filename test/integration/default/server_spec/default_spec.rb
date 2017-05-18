@@ -2,7 +2,7 @@
 # Inspec test for recipe http::default
 
 # Check if user 'root' exists
-unless os.windows?
+unless os.debian?
   describe user('apache') do
     it { should exist }
   end

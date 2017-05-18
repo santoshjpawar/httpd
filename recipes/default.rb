@@ -12,6 +12,12 @@ package 'net-tools' do
   action [:install]
 end
 
-package 'httpd' do
-  action [:install, :upgrade]
+package 'install apache' do
+  case node[:platform]
+    when 'redhat', 'centos'
+      package_name 'httpd'
+    when 'ubuntu', 'debian'
+      package_name 'apache2'
+    end
+    action [:install]
 end
