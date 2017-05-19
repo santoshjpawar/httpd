@@ -1,10 +1,9 @@
 pipeline {
   agent any
 
-  node('master') {
-
-    stages {
-      stage('Unit-Test') {
+  stages {
+    stage('Unit-Test') {
+      node('master') {
         steps {
           echo 'Unit testing..'
           sh "rubocop ."
@@ -15,21 +14,21 @@ pipeline {
           sh "ls -al"
         }
       }
-      stage('Build') {
-          steps {
-              echo 'Building..'
-          }
-      }
-      stage('Test') {
-          steps {
-              echo 'Testing..'
-          }
-      }
-      stage('Deploy') {
-          steps {
-              echo 'Deploying....'
-          }
-      }
+    }
+    stage('Build') {
+        steps {
+            echo 'Building..'
+        }
+    }
+    stage('Test') {
+        steps {
+            echo 'Testing..'
+        }
+    }
+    stage('Deploy') {
+        steps {
+            echo 'Deploying....'
+        }
     }
   }
 }
