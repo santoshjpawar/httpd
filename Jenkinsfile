@@ -4,4 +4,6 @@ node {
   
   # Make the output directory
   sh "mkdir -p output"
+  
+  echo "Hello world"
 }
