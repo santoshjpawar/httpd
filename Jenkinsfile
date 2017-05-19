@@ -1,3 +1,4 @@
+# Run on 'master' node
 node('master') {
 
   stage 'Unit-Test'
@@ -5,16 +6,10 @@ node('master') {
   sh "rubocop ."
   sh "foodcritic ."
   sh "chef exec rspec -f documentation | grep -v ' WARN: '"
-  sh "pwd"
-  sh "hostname"
-  sh "ls -al"
-
-  stage 'Build'
-  echo 'Building..'
   
-  stage 'Test'
-  echo 'Testing..'
+  stage 'Integration-Test'
+  echo 'Integration testing..'
   
-  stage 'Deploy'
-  echo 'Deploying....'
+  stage 'Build-And-Store'
+  echo 'Building and storing artifacts..'
 }
