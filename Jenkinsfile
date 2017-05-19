@@ -7,7 +7,7 @@ pipeline {
         echo 'Unit testing..'
         sh "rubocop ."
         sh "foodcritic ."
-        sh "chef exec rspec -f documentation"
+        sh "chef exec rspec -f documentation -c"
       }
     }
     stage('Build') {
