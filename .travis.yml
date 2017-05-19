@@ -9,7 +9,7 @@ script:
   # Vet the code
   - rubocop .
   - foodcritic .
-  - chef exec rspec
+  - chef exec rspec -f documentation
 notifications:
   email:
     recipients:
