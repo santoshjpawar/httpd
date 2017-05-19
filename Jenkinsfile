@@ -1,4 +1,4 @@
-node {
+node('master') {
 
   stage 'Unit-Test'
   echo 'Unit testing..'
