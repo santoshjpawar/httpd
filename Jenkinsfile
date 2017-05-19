@@ -5,8 +5,6 @@ pipeline {
     stage('Unit-Test') {
       steps {
         echo 'Unit testing..'
-        rubocop .
-        foodcritic .
       }
     }
     stage('Build') {
