@@ -5,6 +5,7 @@ pipeline {
     stage('Unit-Test') {
       steps {
         echo 'Unit testing..'
+        sh "rubocop ."
       }
     }
     stage('Build') {
