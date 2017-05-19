@@ -6,6 +6,8 @@ pipeline {
       steps {
         echo 'Unit testing..'
         sh "rubocop ."
+        sh "foodcritic ."
+        sh "chef exec rspec"
       }
     }
     stage('Build') {
