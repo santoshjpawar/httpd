@@ -9,6 +9,7 @@ pipeline {
         sh "foodcritic ."
         sh "chef exec rspec -f documentation -c"
         sh "pwd"
+        sh "hostname"
         sh "ls -al"
       }
     }
