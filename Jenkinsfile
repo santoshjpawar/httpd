@@ -1,4 +1,3 @@
-# Run on 'master' node
 node('master') {
 
   stage 'Unit-Test'
