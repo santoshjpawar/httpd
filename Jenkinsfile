@@ -1,7 +1,7 @@
 pipeline {
   agent any
 
-  node('linux') {
+  node('master') {
 
     stages {
       stage('Unit-Test') {
