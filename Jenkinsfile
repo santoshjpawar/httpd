@@ -8,6 +8,8 @@ pipeline {
         sh "rubocop ."
         sh "foodcritic ."
         sh "chef exec rspec -f documentation -c"
+        sh "pwd"
+        sh "ls -al"
       }
     }
     stage('Build') {
